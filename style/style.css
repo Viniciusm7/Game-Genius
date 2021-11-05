@@ -1,6 +1,6 @@
 body {
   
-    background:linear-gradient(pink, green);
+    background:linear-gradient(rgb(232, 255, 148), rgb(3, 190, 144));
     margin: 0;
     /* background-color: #e9dbe7 ; */
 }
@@ -20,7 +20,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background:linear-gradient(green, pink) ;
+    /* background:black ; */
     border-radius: 5rem;
     
 

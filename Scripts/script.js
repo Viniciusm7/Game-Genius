@@ -11,6 +11,7 @@ const blue = document.querySelector('.blue');
 const red = document.querySelector('.red');
 const green = document.querySelector('.green');
 const yellow = document.querySelector('.yellow');
+const myScoreGame = document.getElementById('myScoreGame')
 
 //cria ordem aletoria de cores
 let shuffleOrder = () => {
@@ -76,6 +77,7 @@ let createColorElement = (color) => {
 //funcao para proximo nivel do jogo
 let nextLevel = () => {
     score++;
+    myScoreGame.textContent = score;
     shuffleOrder();
 }
 
@@ -84,6 +86,7 @@ let gameOver = () => {
     alert(`Pontuação: ${score}!\nVocê perdeu o jogo!\nClique em OK para iniciar um novo jogo`);
     order = [];
     clickedOrder = [];
+    myScoreGame.textContent = ""
 
     playGame();
 }
@@ -92,6 +95,7 @@ let gameOver = () => {
 let playGame = () => {
     alert('Bem vindo ao Gênesis! Iniciando novo jogo!');
     score = 0;
+    myScoreGame.textContent = score;
 
     nextLevel();
 }
