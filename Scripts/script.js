@@ -61,11 +61,46 @@ let checkOrder = () => {
 // função para click do usuario
 let click  = (color) => {
     clickedOrder[clickedOrder.length] = color;
-    creatC(color).classList.add('selected');
+    createColorElement(color).classList.add('selected');
 
     setTimeout(() => {
         createColorElement(color).classList.remove('selected');
     })
 
     checkOrder();
+} 
+
+// função retorna a cor
+let createColorElement = (color) => {
+    if (color == 0) {
+        return green;
+    } else if (color == 1){
+        return red;
+    }else if (color == 2){
+        return yellow;
+    }else if (color == 3) {
+        return blue;
+    }
+}
+
+// função para o proximo nivel do jogo
+let nextLevel = () => {
+    score++;
+    shuffledOrder();
+}
+
+//função para game over
+let gameOver = () => {
+    alert(`Pontuação ${score}!\n Voce perdeu o jogo!\n Clique em ok para iniciar um novo jogo`);
+    order = []
+    clickedOrder = []
+
+    playGame();
+}
+
+let playGame = () => {
+    alert('Nova rodada!');
+    score = 0;
+
+    nextLevel();
 }
