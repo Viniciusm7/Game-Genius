@@ -1,17 +1,28 @@
 body {
-
-    margin: 0; */
-    background-color: #c9b5c6;
+  
+    background:linear-gradient(pink, green);
+    margin: 0;
+    /* background-color: #e9dbe7 ; */
+}
+.title {
+    position: absolute;
+    margin: 25rem;
+    margin-top: 0rem;
+    margin-left: 31rem;
+    color: rgb(8, 5, 5);
 }
 
-
-
 .main-game {
-    height: 100vh;
-    width: 100vw;
+    margin-left: 5rem;
+    margin-top: 5rem;
+    width: 70rem;
+    height: 45rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    background:linear-gradient(green, pink) ;
+    border-radius: 5rem;
+    
 
 } 
 /* formando a parte dos botoes e o formarto do jogo */
@@ -23,7 +34,7 @@ body {
     border: 1px solid #ffffff;
     background-color: #ffffff;
     border-radius: 100%;
-    margin-top: 1rem;
+    margin-top: 4rem;
     width: 35rem;
     height: 35rem;
 }
@@ -31,7 +42,7 @@ body {
 /* colocando as cores de cada uma parte do grid e 
 deixar o espaçamento adequado */
 .red {
-    background-color: #e01111;
+    background-color:#e01111;
     border-radius: 0rem 1rem 0rem 20rem;
 }
 .blue {
@@ -44,11 +55,11 @@ deixar o espaçamento adequado */
 }
 
 .yellow {
-    background-color: #f8e00b;
+    background-color: #eed519;
     border-radius: 20rem 0rem 1rem 0rem;
 }
 
 
 .selected {
-    opacity: 1rem;
+    opacity: 0.5;
 }
