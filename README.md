@@ -1,3 +1,3 @@
 # Game-Genius
 
-jogo de memoria Genius, realzido como teste pratico do bootcamp Dio.
+jogo de memoria Genius, realizado como teste pratico do bootcamp Dio.
