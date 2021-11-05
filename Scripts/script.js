@@ -14,23 +14,25 @@ const red = document.querySelector('.red');
 const green = document.querySelector('.green');
 const yellow = document.querySelector('.yellow');
 //função para o clink dos butoes aleatorios
+
+
 let shuffledOrder = () => {
     let colorOrder = Math.floor(Math.random() * 4);
     order[order.length] = colorOrder;
     clickedOrder = [];
     // 
     for(let i in order) {
-        let elementColor = creatElement(order[i]);
+        let elementColor = createColorElement(order[i]);
         lightColor(elementColor, Number(i + 1));
     }
 
 }
 // acender a proxima cor
 let lightColor = (element, number) => {
-    time = time * 500;
+    number = number * 500;
     setTimeout(() => {
         element.classList.add('selected');
-    }, tempo - 250 );
+    }, number - 250 );
     // remove o tempo criado em cima
     setTimeout(() => {
         element.classList.remove('selected')
@@ -49,8 +51,21 @@ let checkOrder = () => {
         } 
 
     }
+    // comparação e alert caso acerte o que o jogo pediu.
     if(clickedOrder.length == order.length){
-        alert(`Pontuação: $(score)\n voce acertou, iniciando proximo nivel`);
+        alert(`Pontuação: ${score}\n voce acertou, iniciando proximo nivel`);
         nextLevel();
     }
+}
+
+// função para click do usuario
+let click  = (color) => {
+    clickedOrder[clickedOrder.length] = color;
+    creatC(color).classList.add('selected');
+
+    setTimeout(() => {
+        createColorElement(color).classList.remove('selected');
+    })
+
+    checkOrder();
 }
