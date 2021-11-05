@@ -1,0 +1,54 @@
+body {
+
+    margin: 0; */
+    background-color: #c9b5c6;
+}
+
+
+
+.main-game {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+} 
+/* formando a parte dos botoes e o formarto do jogo */
+.genius {
+    display: grid;
+    grid-template-areas: 'green red'
+    'yellow blue';
+    grid-gap: 0.5rem;
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
+    border-radius: 100%;
+    margin-top: 1rem;
+    width: 35rem;
+    height: 35rem;
+}
+
+/* colocando as cores de cada uma parte do grid e 
+deixar o espaçamento adequado */
+.red {
+    background-color: #e01111;
+    border-radius: 0rem 1rem 0rem 20rem;
+}
+.blue {
+    background-color: #0000f0;
+    border-radius: 0rem 20rem 0rem 1rem;
+}
+.green{
+    background-color: #4db90e;
+    border-radius: 1rem 0rem 20rem 0rem;
+}
+
+.yellow {
+    background-color: #f8e00b;
+    border-radius: 20rem 0rem 1rem 0rem;
+}
+
+
+.select {
+    opacity: 1rem;
+}
