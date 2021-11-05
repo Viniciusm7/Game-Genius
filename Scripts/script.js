@@ -13,7 +13,7 @@ const blue = document.querySelector('.blue');
 const red = document.querySelector('.red');
 const green = document.querySelector('.green');
 const yellow = document.querySelector('.yellow');
-//função para o clink dos butoes 
+//função para o clink dos butoes aleatorios
 let shuffledOrder = () => {
     let colorOrder = Math.floor(Math.random() * 4);
     order[order.length] = colorOrder;
@@ -25,15 +25,32 @@ let shuffledOrder = () => {
     }
 
 }
-// acender os boteos nas ordens aleatorias
+// acender a proxima cor
 let lightColor = (element, number) => {
     time = time * 500;
     setTimeout(() => {
-        element.classList.add('select');
+        element.classList.add('selected');
     }, tempo - 250 );
     // remove o tempo criado em cima
     setTimeout(() => {
-        element.classList.remove('select')
+        element.classList.remove('selected')
     })
 
+}
+
+// variavel para comprar se clicamos 
+// na mesma ordem que o jogo deu 
+
+let checkOrder = () => {
+    for(let i in clickedOrder){
+        if(clickedOrder[i] != order[i]){
+            lose();
+            break;
+        } 
+
+    }
+    if(clickedOrder.length == order.length){
+        alert(`Pontuação: $(score)\n voce acertou, iniciando proximo nivel`);
+        nextLevel();
+    }
 }
